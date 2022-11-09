@@ -54,6 +54,9 @@
             this.lbhora = new System.Windows.Forms.Label();
             this.reloj = new System.Windows.Forms.Timer(this.components);
             this.tT = new System.Windows.Forms.ToolTip(this.components);
+            this.pcsig = new System.Windows.Forms.PictureBox();
+            this.pic_volver = new System.Windows.Forms.PictureBox();
+            this.Picayuda = new System.Windows.Forms.PictureBox();
             this.picPel = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -90,6 +93,9 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcsig)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_volver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picayuda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -210,6 +216,9 @@
             // pnlControl
             // 
             this.pnlControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(63)))));
+            this.pnlControl.Controls.Add(this.pcsig);
+            this.pnlControl.Controls.Add(this.pic_volver);
+            this.pnlControl.Controls.Add(this.Picayuda);
             this.pnlControl.Controls.Add(this.panel7);
             this.pnlControl.Controls.Add(this.panel4);
             this.pnlControl.Controls.Add(this.panel6);
@@ -369,6 +378,44 @@
             // tT
             // 
             this.tT.IsBalloon = true;
+            // 
+            // pcsig
+            // 
+            this.pcsig.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcsig.Image = global::CineHoytsFront.Properties.Resources.flecha_correcta__1_;
+            this.pcsig.Location = new System.Drawing.Point(84, 3);
+            this.pcsig.Name = "pcsig";
+            this.pcsig.Size = new System.Drawing.Size(28, 29);
+            this.pcsig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcsig.TabIndex = 12;
+            this.pcsig.TabStop = false;
+            this.pcsig.Visible = false;
+            this.pcsig.Click += new System.EventHandler(this.pcsig_Click);
+            // 
+            // pic_volver
+            // 
+            this.pic_volver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_volver.Image = global::CineHoytsFront.Properties.Resources.flecha_izquierda__1_;
+            this.pic_volver.Location = new System.Drawing.Point(40, 3);
+            this.pic_volver.Name = "pic_volver";
+            this.pic_volver.Size = new System.Drawing.Size(28, 29);
+            this.pic_volver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_volver.TabIndex = 11;
+            this.pic_volver.TabStop = false;
+            this.pic_volver.Visible = false;
+            this.pic_volver.Click += new System.EventHandler(this.pic_volver_Click);
+            // 
+            // Picayuda
+            // 
+            this.Picayuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Picayuda.Image = global::CineHoytsFront.Properties.Resources.ayuda;
+            this.Picayuda.Location = new System.Drawing.Point(6, 3);
+            this.Picayuda.Name = "Picayuda";
+            this.Picayuda.Size = new System.Drawing.Size(28, 29);
+            this.Picayuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Picayuda.TabIndex = 10;
+            this.Picayuda.TabStop = false;
+            this.Picayuda.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // picPel
             // 
@@ -638,14 +685,14 @@
             this.BtnFacutrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFacutrar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFacutrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnFacutrar.Image = ((System.Drawing.Image)(resources.GetObject("BtnFacutrar.Image")));
+            this.BtnFacutrar.Image = global::CineHoytsFront.Properties.Resources.Factura32;
             this.BtnFacutrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFacutrar.Location = new System.Drawing.Point(0, 0);
             this.BtnFacutrar.Name = "BtnFacutrar";
             this.BtnFacutrar.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.BtnFacutrar.Size = new System.Drawing.Size(213, 49);
             this.BtnFacutrar.TabIndex = 24;
-            this.BtnFacutrar.Text = " Facturas";
+            this.BtnFacutrar.Text = " Facturar";
             this.BtnFacutrar.UseVisualStyleBackColor = false;
             this.BtnFacutrar.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -679,13 +726,13 @@
             this.BtnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFacturas.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnFacturas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnFacturas.Image = ((System.Drawing.Image)(resources.GetObject("BtnFacturas.Image")));
+            this.BtnFacturas.Image = global::CineHoytsFront.Properties.Resources.fact;
             this.BtnFacturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnFacturas.Location = new System.Drawing.Point(0, 144);
             this.BtnFacturas.Name = "BtnFacturas";
             this.BtnFacturas.Size = new System.Drawing.Size(213, 47);
             this.BtnFacturas.TabIndex = 21;
-            this.BtnFacturas.Text = "Facturar";
+            this.BtnFacturas.Text = "Facturas";
             this.BtnFacturas.UseVisualStyleBackColor = false;
             this.BtnFacturas.Click += new System.EventHandler(this.BtnFacturar_Click);
             // 
@@ -805,6 +852,9 @@
             this.panel6.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcsig)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_volver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picayuda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -869,6 +919,9 @@
         private System.Windows.Forms.Button btnPeliculas;
         private System.Windows.Forms.Button btnVendedor;
         private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.PictureBox Picayuda;
+        private System.Windows.Forms.PictureBox pcsig;
+        private System.Windows.Forms.PictureBox pic_volver;
     }
 }
 

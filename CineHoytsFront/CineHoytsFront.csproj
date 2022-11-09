@@ -568,6 +568,13 @@
     <None Include="Resources\vendedor %281%29.png" />
     <None Include="Resources\settings.png" />
     <None Include="Resources\settings %281%29.png" />
+    <None Include="Resources\flecha-correcta.png" />
+    <None Include="Resources\flecha-correcta %281%29.png" />
+    <None Include="Resources\flecha-izquierda %281%29.png" />
+    <None Include="Resources\ayuda.png" />
+    <None Include="Image\Numeros\numero-1.png" />
+    <None Include="Image\Factura32.png" />
+    <None Include="Image\fact.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

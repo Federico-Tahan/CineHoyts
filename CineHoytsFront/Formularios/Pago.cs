@@ -37,19 +37,29 @@ namespace Cine_Hoyts.Formularios
         private async void Pago_Load(object sender, EventArgs e)
         {
             txbVendedor.Text = Login.v.per.Nombre + " " + Login.v.per.Apellido;
-            await CargarCboTipoCompra();
-            await CargarComboAsyncFormaPago();
-            if (f.id_cliente == 0)
+            try
             {
-                await CargarCboClientes();
+                await CargarCboTipoCompra();
+                await CargarComboAsyncFormaPago();
+                if (f.id_cliente == 0)
+                {
+                    await CargarCboClientes();
+                }
+                else
+                {
+                    rbtPosponer.Visible = false;
+                    cboCliente.Enabled = false;
+                    cboCliente.Text = f.cliente.per.Nombre + "" + f.cliente.per.Apellido;
+                    modo = 1;
+                }
             }
-            else
+            catch (Exception)
             {
-                rbtPosponer.Visible = false;
-                cboCliente.Enabled = false;
-                cboCliente.Text = f.cliente.per.Nombre + "" + f.cliente.per.Apellido;
-                modo = 1;
+                MessageBox.Show("Demasiadas solicitudes, intentelo de nuevo mas tarde");
+
             }
+
+
 
 
         }

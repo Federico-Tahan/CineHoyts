@@ -95,26 +95,35 @@ namespace Cine_Hoyts.Formularios
         {
             if (validar())
             {
-                v = new Vendedor();
-                v.Usuario = txbUsuario.Text;
-                v.Contraseña = txbContraseña.Text;
-                if (await Cargar_Loged(v))
+                try
                 {
-                    v = await Cargar_Datos_Vendedor(v);
-                    this.Hide();
-                    mostrar();
-                    Task oTask = new Task(Carga);
-                    oTask.Start();
-                    await oTask;
-                    loading.Close();
-                    obtenerCine().Show();
-                    txbContraseña.Clear();
-                    txbUsuario.Clear();
+                    v = new Vendedor();
+                    v.Usuario = txbUsuario.Text;
+                    v.Contraseña = txbContraseña.Text;
+                    if (await Cargar_Loged(v))
+                    {
+                        v = await Cargar_Datos_Vendedor(v);
+                        this.Hide();
+                        mostrar();
+                        Task oTask = new Task(Carga);
+                        oTask.Start();
+                        await oTask;
+                        loading.Close();
+                        obtenerCine().Show();
+                        txbContraseña.Clear();
+                        txbUsuario.Clear();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Nombre de Usuario/Contraseña Incorrecto", "Error de Logeo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Nombre de Usuario/Contraseña Incorrecto", "Error de Logeo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Demasiadas solicitudes, intentelo de nuevo mas tarde");
+
                 }
+
             }
         }
 

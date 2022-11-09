@@ -27,6 +27,7 @@ namespace Cine_Hoyts.Formularios
         Form FormActual;
         int cont = 0;
         int cont2 = 0;
+        int Cont_tool = 0;
         public Cine()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace Cine_Hoyts.Formularios
             lbDate.Text = DateTime.Now.ToString("dddd MMMM  yyyy");
             if (cont2 == 350)
             {
-                Ejecutar();
+                await Ejecutar();
                 cont2 = 0;
             }
             if (cont == 600)
@@ -97,13 +98,15 @@ namespace Cine_Hoyts.Formularios
             if(Login.v.admin == 1)
             {
                 btnAdmin.Visible = true;
+                Picayuda.Visible = false;
 
             }
+
             subMenu1.Visible = false;
             submenu2.Visible = false;
             panel2.Visible = false;
 
-            Ejecutar();
+            await Ejecutar();
 
 
 
@@ -120,7 +123,8 @@ namespace Cine_Hoyts.Formularios
         {
             LimpiarColor();
             btnCCliente.BackColor = Color.Red;
-            AbrirFormEnPanel(new ConCliente());
+            AbrirFormEnPanel(new ConCliente()); hideartt();
+
 
         }
 
@@ -144,7 +148,8 @@ namespace Cine_Hoyts.Formularios
         {
             LimpiarColor();
             BtnCPelicula.BackColor = Color.Red;
-            AbrirFormEnPanel(new ConPelicula());
+            AbrirFormEnPanel(new ConPelicula()); hideartt();
+
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -209,7 +214,8 @@ namespace Cine_Hoyts.Formularios
             submenu2.Visible = false;
             panel2.Visible = false;
             BtnCliente.BackColor = Color.Red;
-            AbrirFormEnPanel(new CrudCliente());
+            AbrirFormEnPanel(new CrudCliente()); hideartt();
+
 
         }
 
@@ -243,21 +249,24 @@ namespace Cine_Hoyts.Formularios
         {
             LimpiarColor();
             btnCCliente.BackColor = Color.Red;
-            AbrirFormEnPanel(new ConCliente());
+            AbrirFormEnPanel(new ConCliente()); hideartt();
+
         }
 
         private void BtnCPelicula_Click_1(object sender, EventArgs e)
         {
             LimpiarColor();
             BtnCPelicula.BackColor = Color.Red;
-            AbrirFormEnPanel(new ConPelicula());
+            AbrirFormEnPanel(new ConPelicula()); hideartt();
+
         }
 
         private void BtnCFactura_Click_1(object sender, EventArgs e)
         {
             LimpiarColor();
             BtnCFactura.BackColor = Color.Red;
-            AbrirFormEnPanel(new ConFactura());
+            AbrirFormEnPanel(new ConFactura()); hideartt();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -265,14 +274,16 @@ namespace Cine_Hoyts.Formularios
 
             LimpiarColor();
             BtnFacutrar.BackColor = Color.Red;
-            AbrirFormEnPanel(new Facturar());
+            AbrirFormEnPanel(new Facturar()); hideartt();
+
         }
 
         private void btnEstado_Click(object sender, EventArgs e)
         {
             LimpiarColor();
             btnEstado.BackColor = Color.Red;
-            AbrirFormEnPanel(new EstadoFactura());
+            AbrirFormEnPanel(new EstadoFactura()); hideartt();
+
 
         }
 
@@ -322,12 +333,14 @@ namespace Cine_Hoyts.Formularios
             subMenu1.Visible = false;
             submenu2.Visible = false;
             panel2.Visible = false;
-            AbrirFormEnPanel(new Report());
+            AbrirFormEnPanel(new Report()); hideartt();
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Developers());
+            AbrirFormEnPanel(new Developers()); hideartt();
+
 
         }
 
@@ -337,11 +350,12 @@ namespace Cine_Hoyts.Formularios
             subMenu1.Visible = false;
             submenu2.Visible = false;
             panel2.Visible = false;
-            AbrirFormEnPanel(new Game());
+            AbrirFormEnPanel(new Game()); hideartt();
+
 
         }
 
-        private async void Ejecutar()
+        private async Task Ejecutar()
         {
             try
             {
@@ -385,7 +399,8 @@ namespace Cine_Hoyts.Formularios
             subMenu1.Visible = false;
             submenu2.Visible = false;
             panel2.Visible = false;
-            AbrirFormEnPanel(new Developers());
+            AbrirFormEnPanel(new Developers()); hideartt();
+
         }
 
         public void visible_dev()
@@ -408,14 +423,16 @@ namespace Cine_Hoyts.Formularios
         {
             LimpiarColor();
             btnFun.BackColor = Color.Red;
-            AbrirFormEnPanel(new CrudFuncion());
+            AbrirFormEnPanel(new CrudFuncion()); hideartt();
+
         }
 
         private void btnPeliculas_Click(object sender, EventArgs e)
         {
             LimpiarColor();
             btnPeliculas.BackColor = Color.Red;
-            AbrirFormEnPanel(new CrudPelicula());
+            AbrirFormEnPanel(new CrudPelicula()); hideartt();
+
         }
 
         private void btnVendedor_Click(object sender, EventArgs e)
@@ -423,6 +440,206 @@ namespace Cine_Hoyts.Formularios
             LimpiarColor();
             btnVendedor.BackColor = Color.Red;
             AbrirFormEnPanel(new CrudVendedor());
+            hideartt();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            pic_volver.Visible = !pic_volver.Visible;
+            pcsig.Visible = !pcsig.Visible;
+            Cont_tool = 0;
+            if(pcsig.Visible == false)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                hideartt();
+            }
+        }
+
+        private void pic_volver_Click(object sender, EventArgs e)
+        {
+            if (Cont_tool > 0) 
+            {
+                Cont_tool--;
+            }
+            if (Cont_tool == 0)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                hideartt();
+            }else if (Cont_tool == 1)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                hideartt();
+                tT.Show("Click para ir a Inicio", this.Logo, 185, 68);
+            }
+            else if (Cont_tool == 2)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                hideartt();
+                tT.Show("Click para Cargar Clientes", this.BtnCliente, 185, 0);
+            }
+            else if (Cont_tool == 3)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                submenu2.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Facturar", this.BtnFacutrar, 185, 0);
+            }
+            else if (Cont_tool == 4)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                submenu2.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Ver los estados de las facturas", this.btnEstado, 185, -25);
+            }
+            else if (Cont_tool == 5)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                subMenu1.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Consultar Clientes", this.btnCCliente, 185, -25);
+            }
+            else if (Cont_tool == 6)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                subMenu1.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Consultar peliculas", this.BtnCPelicula, 185, -25);
+            }
+            else if (Cont_tool == 7)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                subMenu1.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Consultar peliculas", this.BtnCFactura, 185, -25);
+            }
+            else if (Cont_tool == 8)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+
+                hideartt();
+                tT.Show("Click para Ver los reportes", this.BtnReporte, 185, -25);
+            }
+        }
+
+        private void pcsig_Click(object sender, EventArgs e)
+        {
+            if (Cont_tool < 8)
+            {
+                Cont_tool++;
+            }
+
+            if (Cont_tool == 1)
+            {
+                tT.Show("Click para ir a Inicio", this.Logo, 185,68);
+            }
+            else if (Cont_tool == 2)
+            {
+                hideartt();
+                tT.Show("Click para Cargar Clientes", this.BtnCliente, 185, 0);
+            }
+            else if (Cont_tool == 3)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                submenu2.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Facturar", this.BtnFacutrar, 185, 0);
+            }
+            else if (Cont_tool == 4)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                submenu2.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Ver los estados de las facturas", this.btnEstado, 185, -25);
+            }
+            else if (Cont_tool == 5)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                subMenu1.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Consultar Clientes", this.btnCCliente, 185, -25);
+            }
+            else if (Cont_tool == 6)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                subMenu1.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Consultar peliculas", this.BtnCPelicula, 185, -25);
+            }
+            else if (Cont_tool == 7)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+                subMenu1.Visible = true;
+
+                hideartt();
+                tT.Show("Click para Consultar peliculas", this.BtnCFactura, 185, -25);
+            }
+            else if (Cont_tool == 8)
+            {
+                subMenu1.Visible = false;
+                submenu2.Visible = false;
+                panel2.Visible = false;
+
+                hideartt();
+                tT.Show("Click para Ver los reportes", this.BtnReporte, 185, -25);
+            }
+        }
+
+
+
+        private void hideartt()
+        {
+            tT.Hide(this.Logo);
+
+
+            tT.Hide(this.BtnCliente);
+            tT.Hide(this.BtnFacutrar);
+
+            tT.Hide(this.btnEstado);
+            tT.Hide(this.btnCCliente);
+            tT.Hide(this.BtnCPelicula);
+
+            tT.Hide(this.BtnCFactura);
+
         }
     }
 }

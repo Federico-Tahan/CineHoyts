@@ -153,6 +153,16 @@ namespace CineHoytsFront.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ayuda {
+            get {
+                object obj = ResourceManager.GetObject("ayuda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap butaca_de_cine {
             get {
                 object obj = ResourceManager.GetObject("butaca-de-cine", resourceCulture);
@@ -353,6 +363,16 @@ namespace CineHoytsFront.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fact {
+            get {
+                object obj = ResourceManager.GetObject("fact", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap factura__6_ {
             get {
                 object obj = ResourceManager.GetObject("factura (6)", resourceCulture);
@@ -373,9 +393,49 @@ namespace CineHoytsFront.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Factura32 {
+            get {
+                object obj = ResourceManager.GetObject("Factura32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fede {
             get {
                 object obj = ResourceManager.GetObject("Fede", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_correcta {
+            get {
+                object obj = ResourceManager.GetObject("flecha-correcta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_correcta__1_ {
+            get {
+                object obj = ResourceManager.GetObject("flecha-correcta (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flecha_izquierda__1_ {
+            get {
+                object obj = ResourceManager.GetObject("flecha-izquierda (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -486,6 +546,16 @@ namespace CineHoytsFront.Properties {
         internal static System.Drawing.Bitmap matiu {
             get {
                 object obj = ResourceManager.GetObject("matiu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap numero_1 {
+            get {
+                object obj = ResourceManager.GetObject("numero-1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

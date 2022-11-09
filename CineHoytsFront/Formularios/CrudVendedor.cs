@@ -317,46 +317,62 @@ namespace CineHoytsFront.Formularios
 
         private async void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (validar_campos())
+            try
             {
-                Vendedor c = new Vendedor();
-                abstraer_vendedor(c);
-                if (await Buscar_Vendedor(venSelected.Id_Vendedor))
+                if (validar_campos())
                 {
-                    c.Id_Vendedor = venSelected.Id_Vendedor;
-                    c.per.Id_Persona = venSelected.per.Id_Persona;
-                    if (await Update_Ven(c))
+                    Vendedor c = new Vendedor();
+                    abstraer_vendedor(c);
+                    if (await Buscar_Vendedor(venSelected.Id_Vendedor))
                     {
-                        MessageBox.Show("Modificado Correctamente");
+                        c.Id_Vendedor = venSelected.Id_Vendedor;
+                        c.per.Id_Persona = venSelected.per.Id_Persona;
+                        if (await Update_Ven(c))
+                        {
+                            await cargar_Vendedores();
+                            Cargar_Dgv();
+                            pnlCrud.Visible = false;
+                            habilitar_todo_btn(true);
+                            btnMod.Enabled = false;
+                            BtnGuardar.Enabled = false;
+                            btnBorrar.Enabled = false;
+                            limpiar();
+                            MessageBox.Show("Modificado Correctamente");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Problema con el servidor, Intentelo de nuevo más tarde");
+
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Problema con el servidor, Intentelo de nuevo más tarde");
+                        if (await AltaVen(c))
+                        {
+                            MessageBox.Show("Cargado Correctamente");
+                            await cargar_Vendedores();
+                            Cargar_Dgv();
+                            pnlCrud.Visible = false;
+                            habilitar_todo_btn(true);
+                            btnMod.Enabled = false;
+                            BtnGuardar.Enabled = false;
+                            btnBorrar.Enabled = false;
+                            limpiar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El nombre de usuario ya existe, intente con otro.");
 
+                        }
                     }
+
                 }
-                else
-                {
-                    if (await AltaVen(c))
-                    {
-                        MessageBox.Show("Cargado Correctamente");
-
-                    }
-                    else
-                    {
-                        MessageBox.Show("Problema con el servidor, Intentelo de nuevo más tarde");
-
-                    }
-                }
-                await cargar_Vendedores();
-                Cargar_Dgv();
-                pnlCrud.Visible = false;
-                habilitar_todo_btn(true);
-                btnMod.Enabled = false;
-                BtnGuardar.Enabled = false;
-                btnBorrar.Enabled = false;
-                limpiar();
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Intentalo nuevamente más tarde");
+            }
+
         }
 
         private void abstraer_vendedor(Vendedor c)

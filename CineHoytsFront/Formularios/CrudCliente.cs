@@ -24,12 +24,12 @@ namespace Cine_Hoyts.Formularios
         List<Cliente> clientes = new List<Cliente>();
         Cliente clienteselect;
 
-
+        int Cont_tool = 0;
         public CrudCliente()
         {
             InitializeComponent();
             pnlCrud.Visible = false;
-            this.toolTip1.SetToolTip(this.picdesplegar, "Ocultar detalle");
+            this.Tt.SetToolTip(this.picdesplegar, "Ocultar detalle");
 
         }
 
@@ -470,5 +470,7 @@ namespace Cine_Hoyts.Formularios
             Localidad Locselected = (Localidad)CboLocalidad.SelectedItem;
             await Cargar_barrio(Locselected.codigo_localidad);
         }
+
+       
     }
 }

@@ -333,20 +333,25 @@ namespace CineHoytsFront.Formularios
 
         private void Cargar_DGV()
         {
+
             dgvFuncion.Rows.Clear();
             if (lp is null)
             {
             }
-            foreach (Funcion f in lp)
+            else
             {
-                try
+                foreach (Funcion f in lp)
                 {
-                    dgvFuncion.Rows.Add(f.id_funcion,f.Pelicula,f.Idioma,f.Sala,f.Fecha,f.Hora,"$" + f.monto);
-                }
-                catch (Exception)
-                {
+                    try
+                    {
+                        dgvFuncion.Rows.Add(f.id_funcion, f.Pelicula, f.Idioma, f.Sala, f.Fecha, f.Hora, "$" + f.monto);
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
             }
+            
         }
 
         private void dgvFuncion_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

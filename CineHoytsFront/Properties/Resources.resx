@@ -145,6 +145,9 @@
   <data name="reputacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\reputacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flecha-correcta (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha-correcta (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="coding (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\coding (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,6 +187,9 @@
   <data name="pocholowin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pocholowin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Factura32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\Factura32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1--Clientes que gastaron mas que el prom" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1--Clientes que gastaron mas que el prom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,11 +220,17 @@
   <data name="butaca-de-cine 64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\butaca-de-cine 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ayuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sartenconpururu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sartenconpururu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="7--Vistas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7--Vistas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,6 +250,9 @@
   <data name="6--Recaudacion total" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6--Recaudacion total.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Fede" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\Fede.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="html1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\html1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,14 +265,17 @@
   <data name="actualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\actualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flecha-izquierda (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha-izquierda (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="3--Gastos totales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3--Gastos totales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4--Tickets emitidos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4--Tickets emitidos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fede" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\Fede.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="descarga1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,8 +292,8 @@
   <data name="sarten (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sarten (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="eliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Image\eliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="numero-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\Numeros\numero-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="easter-egg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\easter-egg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -325,6 +343,9 @@
   <data name="coding" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Image\coding.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flecha-correcta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flecha-correcta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tiempo-de-la-funcion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tiempo-de-la-funcion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -334,7 +355,7 @@
   <data name="html" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\html.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fact" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Image\fact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

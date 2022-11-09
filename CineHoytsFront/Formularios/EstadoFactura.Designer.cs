@@ -30,16 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstadoFactura));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvFacturas = new System.Windows.Forms.DataGridView();
+            this.id_fac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FormPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechafac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -117,14 +125,6 @@
             this.BtnPagar = new System.Windows.Forms.Button();
             this.picdesplegar = new System.Windows.Forms.PictureBox();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.id_fac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_Compra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FormPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechafac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -216,6 +216,77 @@
             this.dgvFacturas.Size = new System.Drawing.Size(842, 496);
             this.dgvFacturas.TabIndex = 3;
             this.dgvFacturas.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFacturas_CellContentDoubleClick);
+            // 
+            // id_fac
+            // 
+            this.id_fac.HeaderText = "Nro Factura";
+            this.id_fac.Name = "id_fac";
+            this.id_fac.ReadOnly = true;
+            this.id_fac.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.id_fac.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Vendedor
+            // 
+            this.Vendedor.HeaderText = "Vendedor";
+            this.Vendedor.Name = "Vendedor";
+            this.Vendedor.ReadOnly = true;
+            this.Vendedor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Vendedor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            this.Cliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Tipo_Compra
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Tipo_Compra.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Tipo_Compra.HeaderText = "Tipo Compra";
+            this.Tipo_Compra.Name = "Tipo_Compra";
+            this.Tipo_Compra.ReadOnly = true;
+            this.Tipo_Compra.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Tipo_Compra.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // FormPago
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.FormPago.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FormPago.HeaderText = "Forma Pago";
+            this.FormPago.Name = "FormPago";
+            this.FormPago.ReadOnly = true;
+            this.FormPago.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.FormPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // fecha
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.fecha.DefaultCellStyle = dataGridViewCellStyle4;
+            this.fecha.HeaderText = "Fecha Pago";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.fecha.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // fechafac
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.fechafac.DefaultCellStyle = dataGridViewCellStyle5;
+            this.fechafac.HeaderText = "Fecha Factura";
+            this.fechafac.Name = "fechafac";
+            this.fechafac.ReadOnly = true;
+            this.fechafac.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.fechafac.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // panel1
             // 
@@ -335,7 +406,7 @@
             this.pnlButaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlButaca.Controls.Add(this.pnlbu);
             this.pnlButaca.Controls.Add(this.panel3);
-            this.pnlButaca.Location = new System.Drawing.Point(229, 0);
+            this.pnlButaca.Location = new System.Drawing.Point(255, 0);
             this.pnlButaca.Name = "pnlButaca";
             this.pnlButaca.Size = new System.Drawing.Size(534, 634);
             this.pnlButaca.TabIndex = 81;
@@ -1141,77 +1212,6 @@
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Visible = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
-            // 
-            // id_fac
-            // 
-            this.id_fac.HeaderText = "Nro Factura";
-            this.id_fac.Name = "id_fac";
-            this.id_fac.ReadOnly = true;
-            this.id_fac.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.id_fac.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Vendedor
-            // 
-            this.Vendedor.HeaderText = "Vendedor";
-            this.Vendedor.Name = "Vendedor";
-            this.Vendedor.ReadOnly = true;
-            this.Vendedor.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Vendedor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            this.Cliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cliente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Tipo_Compra
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Tipo_Compra.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Tipo_Compra.HeaderText = "Tipo Compra";
-            this.Tipo_Compra.Name = "Tipo_Compra";
-            this.Tipo_Compra.ReadOnly = true;
-            this.Tipo_Compra.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Tipo_Compra.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // FormPago
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.FormPago.DefaultCellStyle = dataGridViewCellStyle3;
-            this.FormPago.HeaderText = "Forma Pago";
-            this.FormPago.Name = "FormPago";
-            this.FormPago.ReadOnly = true;
-            this.FormPago.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.FormPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // fecha
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.fecha.DefaultCellStyle = dataGridViewCellStyle4;
-            this.fecha.HeaderText = "Fecha Pago";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.fecha.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // fechafac
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.fechafac.DefaultCellStyle = dataGridViewCellStyle5;
-            this.fechafac.HeaderText = "Fecha Factura";
-            this.fechafac.Name = "fechafac";
-            this.fechafac.ReadOnly = true;
-            this.fechafac.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.fechafac.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // EstadoFactura
             // 

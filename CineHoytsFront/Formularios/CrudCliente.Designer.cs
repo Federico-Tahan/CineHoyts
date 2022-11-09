@@ -78,7 +78,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbCrud = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Tt = new System.Windows.Forms.ToolTip(this.components);
             this.pnlControl.SuspendLayout();
             this.pnlCrud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picdesplegar)).BeginInit();
@@ -632,6 +632,10 @@
             this.lbCrud.TabIndex = 0;
             this.lbCrud.Text = "CRUD Cliente";
             // 
+            // Tt
+            // 
+            this.Tt.IsBalloon = true;
+            // 
             // CrudCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -691,7 +695,7 @@
         private System.Windows.Forms.PictureBox picLimpiar;
         private System.Windows.Forms.Label lbid_cliente;
         private System.Windows.Forms.TextBox txbNro_cliente;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip Tt;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnMod;

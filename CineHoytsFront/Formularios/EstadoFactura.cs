@@ -37,7 +37,13 @@ namespace Cine_Hoyts.Formularios
             picdesplegar.Visible = false;
             pnlButaca.Visible = false;
             BtnPagar.SendToBack();
-            await cargar_Facturas();
+            try
+            {
+                await cargar_Facturas();
+            }catch (Exception)
+            {
+                MessageBox.Show("Demasiadas solicitudes, intentelo de nuevo mas tarde");
+            }
         }
         private void cargar_datagrid_factura(List<Factura> LFactura)
         {

@@ -30,9 +30,18 @@ namespace Cine_Hoyts.Formularios
 
         private async void Facturar_Load(object sender, EventArgs e)
         {
-            await CargarComboAsyncPelicula();
-            await CargarComboAsyncPelicula();
-            cboPromocion.DropDownStyle = ComboBoxStyle.DropDownList;
+            try
+            {
+                await CargarComboAsyncPelicula();
+                await CargarComboAsyncPelicula();
+                cboPromocion.DropDownStyle = ComboBoxStyle.DropDownList;
+            }
+            catch
+            {
+                MessageBox.Show("Demasiadas solicitudes, intentelo de nuevo mas tarde");
+
+            }
+
 
         }
         private async Task CargarComboAsyncPelicula()
@@ -118,7 +127,16 @@ namespace Cine_Hoyts.Formularios
             cboTipoSal.SelectedIndex = -1; cboTipoSal.Enabled = false; pnlButaca.Visible = false;
             comprobante.Fun = funcion;
             pm.Add(new Parametro("@id_pelicula", comprobante.Fun.Id_pelicula));
-            await CargarComboAsyncDia(pm);
+            try
+            {
+                await CargarComboAsyncDia(pm);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Demasiadas solicitudes, intentelo de nuevo mas tarde");
+
+            }
 
         }
 
@@ -132,7 +150,16 @@ namespace Cine_Hoyts.Formularios
             comprobante.Fun = funcion;
             pm.Add(new Parametro("@id_pelicula", comprobante.Fun.Id_pelicula));
             pm.Add(new Parametro("@fecha", comprobante.Fun.Fecha));
-            await CargarComboAsyncHora(pm);
+            try
+            {
+                await CargarComboAsyncHora(pm);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Demasiadas solicitudes, intentelo de nuevo mas tarde");
+
+            }
         }
 
         private async void cboHora_SelectionChangeCommitted(object sender, EventArgs e)
@@ -148,7 +175,16 @@ namespace Cine_Hoyts.Formularios
             pm.Add(new Parametro("@id_pelicula", comprobante.Fun.Id_pelicula));
             pm.Add(new Parametro("@fecha", comprobante.Fun.Fecha));
             pm.Add(new Parametro("@id_horario", comprobante.Fun.Id_horario));
-            await CargarComboAsyncIdioma(pm);
+            try
+            {
+                await CargarComboAsyncIdioma(pm);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Demasiadas solicitudes, intentelo de nuevo mas tarde");
+
+            }
         }
 
         private async void cboIdioma_SelectionChangeCommitted(object sender, EventArgs e)
@@ -164,7 +200,16 @@ namespace Cine_Hoyts.Formularios
             pm.Add(new Parametro("@fecha", comprobante.Fun.Fecha));
             pm.Add(new Parametro("@id_horario", comprobante.Fun.Id_horario));
             pm.Add(new Parametro("@id_idioma", comprobante.Fun.Id_idioma));
-            await CargarComboAsyncTipoSala(pm);
+            try
+            {
+                await CargarComboAsyncTipoSala(pm);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Demasiadas solicitudes, intentelo de nuevo mas tarde");
+
+            }
         }
 
         private async void cboTipoSal_SelectionChangeCommitted(object sender, EventArgs e)
@@ -182,7 +227,16 @@ namespace Cine_Hoyts.Formularios
             pm.Add(new Parametro("@id_idioma", comprobante.Fun.Id_idioma));
             pm.Add(new Parametro("@id_sala", comprobante.Fun.Id_sala));
 
-            await Cargar_Funcion(pm);
+            try
+            {
+                await Cargar_Funcion(pm);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Demasiadas solicitudes, intentelo de nuevo mas tarde");
+
+            }
 
             reiniciar_butacas();
             comprobante.monto = comprobante.Fun.monto;
@@ -235,7 +289,15 @@ namespace Cine_Hoyts.Formularios
             cboDia.SelectedIndex = -1;
             cboIdioma.SelectedIndex = -1;
             cboTipoSal.SelectedIndex = -1;
-            await CargarComboAsyncPelicula();
+            try
+            {
+                await CargarComboAsyncPelicula();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Demasiadas solicitudes intentalo nuevamente más tarde");
+            }
             cboDia.Enabled = false;
             cboHora.Enabled = false;
             cboIdioma.Enabled = false;
