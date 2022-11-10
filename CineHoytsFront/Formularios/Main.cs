@@ -41,11 +41,6 @@ namespace Cine_Hoyts.Formularios
             cont2++;
             lbhora.Text = DateTime.Now.ToLongTimeString();
             lbDate.Text = DateTime.Now.ToString("dddd MMMM  yyyy");
-            if (cont2 == 350)
-            {
-                await Ejecutar();
-                cont2 = 0;
-            }
             if (cont == 600)
             {
                 Picegg.Visible = true;
@@ -72,7 +67,7 @@ namespace Cine_Hoyts.Formularios
             }
             return instancia;
         }
-        private void Logo_Click(object sender, EventArgs e)
+        private async void Logo_Click(object sender, EventArgs e)
         {
             LimpiarColor();
             pnlControl.Controls.Remove(FormActual);
@@ -80,6 +75,7 @@ namespace Cine_Hoyts.Formularios
             subMenu1.Visible = false;
             submenu2.Visible = false;
             panel2.Visible = false;
+            await Ejecutar();
 
 
         }
@@ -105,9 +101,6 @@ namespace Cine_Hoyts.Formularios
             subMenu1.Visible = false;
             submenu2.Visible = false;
             panel2.Visible = false;
-
-            await Ejecutar();
-
 
 
         }
@@ -269,17 +262,18 @@ namespace Cine_Hoyts.Formularios
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-
+            await Ejecutar();
             LimpiarColor();
             BtnFacutrar.BackColor = Color.Red;
             AbrirFormEnPanel(new Facturar()); hideartt();
 
         }
 
-        private void btnEstado_Click(object sender, EventArgs e)
+        private async void btnEstado_Click(object sender, EventArgs e)
         {
+            await Ejecutar();
             LimpiarColor();
             btnEstado.BackColor = Color.Red;
             AbrirFormEnPanel(new EstadoFactura()); hideartt();
@@ -355,7 +349,7 @@ namespace Cine_Hoyts.Formularios
 
         }
 
-        private async Task Ejecutar()
+        public async Task Ejecutar()
         {
             try
             {

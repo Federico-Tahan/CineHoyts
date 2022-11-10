@@ -348,13 +348,14 @@ namespace Cine_Hoyts.Formularios
             if (cboPelicula.SelectedIndex != -1 && cboDia.SelectedIndex != -1 && cboHora.SelectedIndex != -1
                 && cboIdioma.SelectedIndex != -1 && cboTipoSal.SelectedIndex != -1)
             {
-                List<Parametro> pm = new List<Parametro>();
-                pm.Add(new Parametro("@id_sala", comprobante.Fun.Id_sala));
-                pm.Add(new Parametro("@id_funcion", comprobante.Fun.id_funcion));
-                but = await  CargarButaca(pm);
-                txbCantEntradas.Text = Convert.ToString(comprobante.TicketLista.Count);
-                ocupar_butacas();
-                pnlButaca.Visible = !pnlButaca.Visible;
+                    List<Parametro> pm = new List<Parametro>();
+                    pm.Add(new Parametro("@id_sala", comprobante.Fun.Id_sala));
+                    pm.Add(new Parametro("@id_funcion", comprobante.Fun.id_funcion));
+                    but = await CargarButaca(pm);
+                    txbCantEntradas.Text = Convert.ToString(comprobante.TicketLista.Count);
+                    ocupar_butacas();
+                    pnlButaca.Visible = !pnlButaca.Visible;
+
             }
             else
             {
@@ -367,7 +368,11 @@ namespace Cine_Hoyts.Formularios
             string FiltrosJson = JsonConvert.SerializeObject(pm);
             string url = "https://localhost:7271/api/CRUDfactura/GetButacas";
             var data = await ClaseSingleton.GetInstance().PostAsync(url, FiltrosJson);
+            if (data == null)
+            {
+                 data = await ClaseSingleton.GetInstance().PostAsync(url, FiltrosJson);
 
+            }
             return  JsonConvert.DeserializeObject<List<Butaca>>(data);
 
         }
@@ -529,235 +534,246 @@ namespace Cine_Hoyts.Formularios
         }
         private void ocupar_butacas()
         {
-            foreach (Butaca b in but)
+            if(but is null)
             {
 
-                if (b.Fila == "A" && b.nro == 1)
+                MessageBox.Show("Intentalo nuevamente más tarde");
+
+
+            }
+            else
+            {
+                foreach (Butaca b in but)
                 {
-                    picbut1.Image = Resources.ia;
-                    picbut1.Enabled = false;
-                }
-                else if (b.Fila == "A" && b.nro == 2)
-                {
-                    picbut2.Image = Resources.ia;
-                    picbut2.Enabled = false;
-                }
-                else if (b.Fila == "A" && b.nro == 3)
-                {
-                    picbut3.Image = Resources.ia;
-                    picbut3.Enabled = false;
-                }
-                else if (b.Fila == "A" && b.nro == 4)
-                {
-                    picbut4.Image = Resources.ia;
-                    picbut4.Enabled = false;
-                }
-                else if (b.Fila == "A" && b.nro == 5)
-                {
-                    picbut5.Image = Resources.ia;
-                    picbut5.Enabled = false;
-                }
-                else if (b.Fila == "B" && b.nro == 1)
-                {
-                    picbut6.Image = Resources.ia;
-                    picbut6.Enabled = false;
-                }
-                else if (b.Fila == "B" && b.nro == 2)
-                {
-                    picbut7.Image = Resources.ia;
-                    picbut7.Enabled = false;
-                }
-                else if (b.Fila == "B" && b.nro == 3)
-                {
-                    picbut8.Image = Resources.ia;
-                    picbut8.Enabled = false;
-                }
-                else if (b.Fila == "B" && b.nro == 4)
-                {
-                    picbut9.Image = Resources.ia;
-                    picbut9.Enabled = false;
-                }
-                else if (b.Fila == "B" && b.nro == 5)
-                {
-                    picbut10.Image = Resources.ia;
-                    picbut10.Enabled = false;
-                }
-                else if (b.Fila == "C" && b.nro == 1)
-                {
-                    picbut11.Image = Resources.ia;
-                    picbut11.Enabled = false;
-                }
-                else if (b.Fila == "C" && b.nro == 2)
-                {
-                    picbut12.Image = Resources.ia;
-                    picbut12.Enabled = false;
-                }
-                else if (b.Fila == "C" && b.nro == 3)
-                {
-                    picbut13.Image = Resources.ia;
-                    picbut13.Enabled = false;
-                }
-                else if (b.Fila == "C" && b.nro == 4)
-                {
-                    picbut15.Image = Resources.ia;
-                    picbut15.Enabled = false;
-                }
-                else if (b.Fila == "C" && b.nro == 5)
-                {
-                    picbut16.Image = Resources.ia;
-                    picbut16.Enabled = false;
-                }
-                else if (b.Fila == "D" && b.nro == 1)
-                {
-                    picbut17.Image = Resources.ia;
-                    picbut17.Enabled = false;
-                }
-                else if (b.Fila == "D" && b.nro == 2)
-                {
-                    picbut18.Image = Resources.ia;
-                    picbut18.Enabled = false;
-                }
-                else if (b.Fila == "D" && b.nro == 3)
-                {
-                    picbut19.Image = Resources.ia;
-                    picbut19.Enabled = false;
-                }
-                else if (b.Fila == "D" && b.nro == 4)
-                {
-                    picbut20.Image = Resources.ia;
-                    picbut20.Enabled = false;
-                }
-                else if (b.Fila == "D" && b.nro == 5)
-                {
-                    picbut21.Image = Resources.ia;
-                    picbut21.Enabled = false;
-                }
-                else if (b.Fila == "E" && b.nro == 1)
-                {
-                    picbut22.Image = Resources.ia;
-                    picbut22.Enabled = false;
-                }
-                else if (b.Fila == "E" && b.nro == 2)
-                {
-                    picbut23.Image = Resources.ia;
-                    picbut23.Enabled = false;
-                }
-                else if (b.Fila == "E" && b.nro == 3)
-                {
-                    picbut24.Image = Resources.ia;
-                    picbut24.Enabled = false;
-                }
-                else if (b.Fila == "E" && b.nro == 4)
-                {
-                    picbut25.Image = Resources.ia;
-                    picbut25.Enabled = false;
-                }
-                else if (b.Fila == "E" && b.nro == 5)
-                {
-                    picbut26.Image = Resources.ia;
-                    picbut26.Enabled = false;
-                }
-                else if (b.Fila == "F" && b.nro == 1)
-                {
-                    picbut27.Image = Resources.ia;
-                    picbut27.Enabled = false;
-                }
-                else if (b.Fila == "F" && b.nro == 2)
-                {
-                    picbut28.Image = Resources.ia;
-                    picbut28.Enabled = false;
-                }
-                else if (b.Fila == "F" && b.nro == 3)
-                {
-                    picbut29.Image = Resources.ia;
-                    picbut29.Enabled = false;
-                }
-                else if (b.Fila == "F" && b.nro == 4)
-                {
-                    picbut30.Image = Resources.ia;
-                    picbut30.Enabled = false;
-                }
-                else if (b.Fila == "F" && b.nro == 5)
-                {
-                    picbut31.Image = Resources.ia;
-                    picbut31.Enabled = false;
-                }
-                else if (b.Fila == "G" && b.nro == 1)
-                {
-                    picbut32.Image = Resources.ia;
-                    picbut32.Enabled = false;
-                }
-                else if (b.Fila == "G" && b.nro == 2)
-                {
-                    picbut33.Image = Resources.ia;
-                    picbut33.Enabled = false;
-                }
-                else if (b.Fila == "G" && b.nro == 3)
-                {
-                    picbut34.Image = Resources.ia;
-                    picbut34.Enabled = false;
-                }
-                else if (b.Fila == "G" && b.nro == 4)
-                {
-                    picbut35.Image = Resources.ia;
-                    picbut35.Enabled = false;
-                }
-                else if (b.Fila == "G" && b.nro == 5)
-                {
-                    picbut36.Image = Resources.ia;
-                    picbut36.Enabled = false;
-                }
-                else if (b.Fila == "H" && b.nro == 1)
-                {
-                    picbut37.Image = Resources.ia;
-                    picbut37.Enabled = false;
-                }
-                else if (b.Fila == "H" && b.nro == 2)
-                {
-                    picbut38.Image = Resources.ia;
-                    picbut38.Enabled = false;
-                }
-                else if (b.Fila == "H" && b.nro == 3)
-                {
-                    picbut39.Image = Resources.ia;
-                    picbut39.Enabled = false;
-                }
-                else if (b.Fila == "H" && b.nro == 4)
-                {
-                    picbut40.Image = Resources.ia;
-                    picbut40.Enabled = false;
-                }
-                else if (b.Fila == "H" && b.nro == 5)
-                {
-                    picbut41.Image = Resources.ia;
-                    picbut41.Enabled = false;
-                }
-                else if (b.Fila == "I" && b.nro == 1)
-                {
-                    picbut42.Image = Resources.ia;
-                    picbut42.Enabled = false;
-                }
-                else if (b.Fila == "I" && b.nro == 2)
-                {
-                    picbut43.Image = Resources.ia;
-                    picbut43.Enabled = false;
-                }
-                else if (b.Fila == "I" && b.nro == 3)
-                {
-                    picbut44.Image = Resources.ia;
-                    picbut44.Enabled = false;
-                }
-                else if (b.Fila == "I" && b.nro == 4)
-                {
-                    picbut45.Image = Resources.ia;
-                    picbut45.Enabled = false;
-                }
-                else if (b.Fila == "I" && b.nro == 5)
-                {
-                    picbut46.Image = Resources.ia;
-                    picbut46.Enabled = false;
+
+                    if (b.Fila == "A" && b.nro == 1)
+                    {
+                        picbut1.Image = Resources.ia;
+                        picbut1.Enabled = false;
+                    }
+                    else if (b.Fila == "A" && b.nro == 2)
+                    {
+                        picbut2.Image = Resources.ia;
+                        picbut2.Enabled = false;
+                    }
+                    else if (b.Fila == "A" && b.nro == 3)
+                    {
+                        picbut3.Image = Resources.ia;
+                        picbut3.Enabled = false;
+                    }
+                    else if (b.Fila == "A" && b.nro == 4)
+                    {
+                        picbut4.Image = Resources.ia;
+                        picbut4.Enabled = false;
+                    }
+                    else if (b.Fila == "A" && b.nro == 5)
+                    {
+                        picbut5.Image = Resources.ia;
+                        picbut5.Enabled = false;
+                    }
+                    else if (b.Fila == "B" && b.nro == 1)
+                    {
+                        picbut6.Image = Resources.ia;
+                        picbut6.Enabled = false;
+                    }
+                    else if (b.Fila == "B" && b.nro == 2)
+                    {
+                        picbut7.Image = Resources.ia;
+                        picbut7.Enabled = false;
+                    }
+                    else if (b.Fila == "B" && b.nro == 3)
+                    {
+                        picbut8.Image = Resources.ia;
+                        picbut8.Enabled = false;
+                    }
+                    else if (b.Fila == "B" && b.nro == 4)
+                    {
+                        picbut9.Image = Resources.ia;
+                        picbut9.Enabled = false;
+                    }
+                    else if (b.Fila == "B" && b.nro == 5)
+                    {
+                        picbut10.Image = Resources.ia;
+                        picbut10.Enabled = false;
+                    }
+                    else if (b.Fila == "C" && b.nro == 1)
+                    {
+                        picbut11.Image = Resources.ia;
+                        picbut11.Enabled = false;
+                    }
+                    else if (b.Fila == "C" && b.nro == 2)
+                    {
+                        picbut12.Image = Resources.ia;
+                        picbut12.Enabled = false;
+                    }
+                    else if (b.Fila == "C" && b.nro == 3)
+                    {
+                        picbut13.Image = Resources.ia;
+                        picbut13.Enabled = false;
+                    }
+                    else if (b.Fila == "C" && b.nro == 4)
+                    {
+                        picbut15.Image = Resources.ia;
+                        picbut15.Enabled = false;
+                    }
+                    else if (b.Fila == "C" && b.nro == 5)
+                    {
+                        picbut16.Image = Resources.ia;
+                        picbut16.Enabled = false;
+                    }
+                    else if (b.Fila == "D" && b.nro == 1)
+                    {
+                        picbut17.Image = Resources.ia;
+                        picbut17.Enabled = false;
+                    }
+                    else if (b.Fila == "D" && b.nro == 2)
+                    {
+                        picbut18.Image = Resources.ia;
+                        picbut18.Enabled = false;
+                    }
+                    else if (b.Fila == "D" && b.nro == 3)
+                    {
+                        picbut19.Image = Resources.ia;
+                        picbut19.Enabled = false;
+                    }
+                    else if (b.Fila == "D" && b.nro == 4)
+                    {
+                        picbut20.Image = Resources.ia;
+                        picbut20.Enabled = false;
+                    }
+                    else if (b.Fila == "D" && b.nro == 5)
+                    {
+                        picbut21.Image = Resources.ia;
+                        picbut21.Enabled = false;
+                    }
+                    else if (b.Fila == "E" && b.nro == 1)
+                    {
+                        picbut22.Image = Resources.ia;
+                        picbut22.Enabled = false;
+                    }
+                    else if (b.Fila == "E" && b.nro == 2)
+                    {
+                        picbut23.Image = Resources.ia;
+                        picbut23.Enabled = false;
+                    }
+                    else if (b.Fila == "E" && b.nro == 3)
+                    {
+                        picbut24.Image = Resources.ia;
+                        picbut24.Enabled = false;
+                    }
+                    else if (b.Fila == "E" && b.nro == 4)
+                    {
+                        picbut25.Image = Resources.ia;
+                        picbut25.Enabled = false;
+                    }
+                    else if (b.Fila == "E" && b.nro == 5)
+                    {
+                        picbut26.Image = Resources.ia;
+                        picbut26.Enabled = false;
+                    }
+                    else if (b.Fila == "F" && b.nro == 1)
+                    {
+                        picbut27.Image = Resources.ia;
+                        picbut27.Enabled = false;
+                    }
+                    else if (b.Fila == "F" && b.nro == 2)
+                    {
+                        picbut28.Image = Resources.ia;
+                        picbut28.Enabled = false;
+                    }
+                    else if (b.Fila == "F" && b.nro == 3)
+                    {
+                        picbut29.Image = Resources.ia;
+                        picbut29.Enabled = false;
+                    }
+                    else if (b.Fila == "F" && b.nro == 4)
+                    {
+                        picbut30.Image = Resources.ia;
+                        picbut30.Enabled = false;
+                    }
+                    else if (b.Fila == "F" && b.nro == 5)
+                    {
+                        picbut31.Image = Resources.ia;
+                        picbut31.Enabled = false;
+                    }
+                    else if (b.Fila == "G" && b.nro == 1)
+                    {
+                        picbut32.Image = Resources.ia;
+                        picbut32.Enabled = false;
+                    }
+                    else if (b.Fila == "G" && b.nro == 2)
+                    {
+                        picbut33.Image = Resources.ia;
+                        picbut33.Enabled = false;
+                    }
+                    else if (b.Fila == "G" && b.nro == 3)
+                    {
+                        picbut34.Image = Resources.ia;
+                        picbut34.Enabled = false;
+                    }
+                    else if (b.Fila == "G" && b.nro == 4)
+                    {
+                        picbut35.Image = Resources.ia;
+                        picbut35.Enabled = false;
+                    }
+                    else if (b.Fila == "G" && b.nro == 5)
+                    {
+                        picbut36.Image = Resources.ia;
+                        picbut36.Enabled = false;
+                    }
+                    else if (b.Fila == "H" && b.nro == 1)
+                    {
+                        picbut37.Image = Resources.ia;
+                        picbut37.Enabled = false;
+                    }
+                    else if (b.Fila == "H" && b.nro == 2)
+                    {
+                        picbut38.Image = Resources.ia;
+                        picbut38.Enabled = false;
+                    }
+                    else if (b.Fila == "H" && b.nro == 3)
+                    {
+                        picbut39.Image = Resources.ia;
+                        picbut39.Enabled = false;
+                    }
+                    else if (b.Fila == "H" && b.nro == 4)
+                    {
+                        picbut40.Image = Resources.ia;
+                        picbut40.Enabled = false;
+                    }
+                    else if (b.Fila == "H" && b.nro == 5)
+                    {
+                        picbut41.Image = Resources.ia;
+                        picbut41.Enabled = false;
+                    }
+                    else if (b.Fila == "I" && b.nro == 1)
+                    {
+                        picbut42.Image = Resources.ia;
+                        picbut42.Enabled = false;
+                    }
+                    else if (b.Fila == "I" && b.nro == 2)
+                    {
+                        picbut43.Image = Resources.ia;
+                        picbut43.Enabled = false;
+                    }
+                    else if (b.Fila == "I" && b.nro == 3)
+                    {
+                        picbut44.Image = Resources.ia;
+                        picbut44.Enabled = false;
+                    }
+                    else if (b.Fila == "I" && b.nro == 4)
+                    {
+                        picbut45.Image = Resources.ia;
+                        picbut45.Enabled = false;
+                    }
+                    else if (b.Fila == "I" && b.nro == 5)
+                    {
+                        picbut46.Image = Resources.ia;
+                        picbut46.Enabled = false;
+                    }
                 }
             }
+            
 
 
         }
@@ -2588,6 +2604,7 @@ namespace Cine_Hoyts.Formularios
         private void dgvComprobantes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvComprobantes.Columns[e.ColumnIndex].Name == "qitar")
+
             {
                 fac.remover(dgvComprobantes.CurrentRow.Index);
                 dgvComprobantes.Rows.Remove(dgvComprobantes.CurrentRow);

@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GastoTotalClientes));
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.sPGastoTotalDeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datReport = new CineHoytsFront.Formularios.Reporte.DatReport();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picreset = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -42,16 +45,28 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.datReport = new CineHoytsFront.Formularios.Reporte.DatReport();
-            this.datReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sPGastoTotalDeClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sP_GastoTotalDeClientesTableAdapter = new CineHoytsFront.Formularios.Reporte.DatReportTableAdapters.SP_GastoTotalDeClientesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.sPGastoTotalDeClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datReportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datReport)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picreset)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datReport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datReportBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sPGastoTotalDeClientesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // sPGastoTotalDeClientesBindingSource
+            // 
+            this.sPGastoTotalDeClientesBindingSource.DataMember = "SP_GastoTotalDeClientes";
+            this.sPGastoTotalDeClientesBindingSource.DataSource = this.datReportBindingSource;
+            // 
+            // datReportBindingSource
+            // 
+            this.datReportBindingSource.DataSource = this.datReport;
+            this.datReportBindingSource.Position = 0;
+            // 
+            // datReport
+            // 
+            this.datReport.DataSetName = "DatReport";
+            this.datReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -135,18 +150,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(397, 55);
+            this.label3.Location = new System.Drawing.Point(380, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 18);
+            this.label3.Size = new System.Drawing.Size(230, 18);
             this.label3.TabIndex = 85;
-            this.label3.Text = "Letra Comienzo Apellido";
+            this.label3.Text = "Rango Apellido entre A - Letra";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(221, 55);
+            this.label2.Location = new System.Drawing.Point(244, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 18);
             this.label2.TabIndex = 84;
@@ -157,7 +172,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(34, 55);
+            this.label1.Location = new System.Drawing.Point(47, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 83;
@@ -217,21 +232,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(912, 335);
             this.reportViewer1.TabIndex = 1;
             // 
-            // datReport
-            // 
-            this.datReport.DataSetName = "DatReport";
-            this.datReport.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // datReportBindingSource
-            // 
-            this.datReportBindingSource.DataSource = this.datReport;
-            this.datReportBindingSource.Position = 0;
-            // 
-            // sPGastoTotalDeClientesBindingSource
-            // 
-            this.sPGastoTotalDeClientesBindingSource.DataMember = "SP_GastoTotalDeClientes";
-            this.sPGastoTotalDeClientesBindingSource.DataSource = this.datReportBindingSource;
-            // 
             // sP_GastoTotalDeClientesTableAdapter
             // 
             this.sP_GastoTotalDeClientesTableAdapter.ClearBeforeFill = true;
@@ -247,12 +247,12 @@
             this.Name = "GastoTotalClientes";
             this.Text = "GastoTotalClientes";
             this.Load += new System.EventHandler(this.GastoTotalClientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.sPGastoTotalDeClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datReportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datReport)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picreset)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datReport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datReportBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sPGastoTotalDeClientesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

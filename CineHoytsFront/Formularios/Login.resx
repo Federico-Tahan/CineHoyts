@@ -505,7 +505,7 @@
   <data name="picBoxMostrar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5gAAAOYBIly6UQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANfSURBVFhH7VZL
+        5QAAAOUBj+WbPAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANfSURBVFhH7VZL
         TxNRFIZiIJTGuLCURwTDw61tKbgDSiktLRSKtLS0pTy0Ilip0WiMr4JQje7UhYI8ArrRuPIRXamoieDG
         UMBo0Lgk+A/EcL3fpTO0mUEgkLjpl5zcM+ec77szc+89MwlxxBHHVhEMBne1+7q0zW7vGYfDFYK5PN7T
         iCEXKdtZdHZ2ZlutjRNKpXopNTWV0JCoIadUqZfqG2zjPp8vk8a2h0AgsMdkqn0llaat0Et+IkVGJiku
@@ -526,7 +526,7 @@
   <data name="PicBoxOculto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        5QAAAOUBj+WbPAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAR2SURBVFhH7VVt
+        5AAAAOQBXaJ52AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAR2SURBVFhH7VVt
         TFtVGL50ocPyVQbODGyhGDcmISZ2IJZigdENkUkoLehYoS0t0MIGbtEfGhP8YTQTGZk6XLZs0R/uh2bq
         QpapS5wThbENNztwW/AjMdFfxqiJQxN2PM/TeyuoM3HsZ5/kzXnP+z7v89577jnnKgkkkICGYLDP4nK3
         HGj2tO7v7t5xtxq+Zejt3bkW2uiBXmo4hnZ/sDU9I+O6dAUsMzPzus8X8jJ5CwAtaEqX+uiFnkwC6+8p
@@ -582,7 +582,7 @@
         xUAa4EouKCoB0n+A2CgltTiZgYHRAMjOLi8pAIozzgGyRZKywewNIHZRSJAzkH0EyOZLh7CvgNhJEPYT
         ELsI6Akg+wtIfTqYzcQBNgfClgGxS1IrQPYyOOcXVBZlpmeUKBhaWloqOKbkJ6UqBFcWl6TmFit45iXn
         FxXkFyWWpKYA1ULcBwaCEIWgENMAarTQZKAyAMUDhPU5EBy+jGJnEGIIkFxaVAZlMjIZE+YjzJgjwcDg
-        v5SBgeUPQsykl4FhgQ4DA/9UhJiaIQODgD4Dw745AMDGT/0ZOjZcAAAACXBIWXMAAAsOAAALDgFAvuFB
+        v5SBgeUPQsykl4FhgQ4DA/9UhJiaIQODgD4Dw745AMDGT/0ZOjZcAAAACXBIWXMAAAsNAAALDQHtB8As
         AAD+VElEQVR4XuzdB5hU1dkHcFh26b333ouUAUVNrKhY0KgxJErsYj5biI2o0agxStRoNFZssQuCCIgg
         IIIiCNKrgIiN3rb33fd73ztz12F4d+69M3dm7sz+z/P8XDw7c+65d2Z35/yfc86tRkQAAAAAAAAAAACe
         pVYCAAAAAAAAAAB4hVoJAAAAAAAAAADgFWolAAAAAAAAAACAV6iVAAAAAAAAAAAAXqFWAgAAAAAAAAAA

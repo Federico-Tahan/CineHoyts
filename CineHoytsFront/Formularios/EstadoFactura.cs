@@ -571,9 +571,6 @@ namespace Cine_Hoyts.Formularios
                 await cargar_Facturas();
                 cargar_datagrid_factura(LFactura);
             }
-
-
-
         }
 
 

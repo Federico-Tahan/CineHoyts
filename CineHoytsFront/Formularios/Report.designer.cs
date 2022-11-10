@@ -31,37 +31,37 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnReport7 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnReport5 = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.btnReport4 = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panelReport = new System.Windows.Forms.Panel();
-            this.btnReport7 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.btnReport5 = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnReport4 = new System.Windows.Forms.Button();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnReport3 = new System.Windows.Forms.Button();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.btnReport2 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panelReport = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel10.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +92,36 @@
             this.panel14.Size = new System.Drawing.Size(777, 46);
             this.panel14.TabIndex = 87;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(2, 4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 80;
+            this.pictureBox4.TabStop = false;
+            // 
+            // btnReport7
+            // 
+            this.btnReport7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnReport7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnReport7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnReport7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnReport7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReport7.Image = global::CineHoytsFront.Properties.Resources._7__Vistas;
+            this.btnReport7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport7.Location = new System.Drawing.Point(729, 0);
+            this.btnReport7.Name = "btnReport7";
+            this.btnReport7.Size = new System.Drawing.Size(46, 44);
+            this.btnReport7.TabIndex = 74;
+            this.btnReport7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReport7.UseVisualStyleBackColor = false;
+            this.btnReport7.Click += new System.EventHandler(this.btnReport7_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -116,6 +146,16 @@
             this.panel15.Size = new System.Drawing.Size(777, 47);
             this.panel15.TabIndex = 86;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 81;
+            this.pictureBox5.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -126,6 +166,26 @@
             this.label11.Size = new System.Drawing.Size(252, 23);
             this.label11.TabIndex = 75;
             this.label11.Text = "Espectadores por pelicula";
+            // 
+            // btnReport5
+            // 
+            this.btnReport5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnReport5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnReport5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnReport5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnReport5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReport5.Image = global::CineHoytsFront.Properties.Resources._5___Espectadores_por_pelicula;
+            this.btnReport5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport5.Location = new System.Drawing.Point(729, 0);
+            this.btnReport5.Name = "btnReport5";
+            this.btnReport5.Size = new System.Drawing.Size(46, 45);
+            this.btnReport5.TabIndex = 74;
+            this.btnReport5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReport5.UseVisualStyleBackColor = false;
+            this.btnReport5.Click += new System.EventHandler(this.btnReport5_Click);
             // 
             // panel16
             // 
@@ -140,6 +200,16 @@
             this.panel16.Size = new System.Drawing.Size(777, 46);
             this.panel16.TabIndex = 85;
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(37, 37);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 82;
+            this.pictureBox6.TabStop = false;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -150,6 +220,26 @@
             this.label12.Size = new System.Drawing.Size(287, 23);
             this.label12.TabIndex = 75;
             this.label12.Text = "Tickets emitidos por vendedor";
+            // 
+            // btnReport4
+            // 
+            this.btnReport4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnReport4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnReport4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnReport4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnReport4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnReport4.Image = global::CineHoytsFront.Properties.Resources._4__Tickets_emitidos;
+            this.btnReport4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReport4.Location = new System.Drawing.Point(729, 0);
+            this.btnReport4.Name = "btnReport4";
+            this.btnReport4.Size = new System.Drawing.Size(46, 44);
+            this.btnReport4.TabIndex = 74;
+            this.btnReport4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnReport4.UseVisualStyleBackColor = false;
+            this.btnReport4.Click += new System.EventHandler(this.btnReport4_Click);
             // 
             // panel17
             // 
@@ -175,58 +265,6 @@
             this.label13.TabIndex = 75;
             this.label13.Text = "Gasto totales de clientes";
             // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
-            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel18.Controls.Add(this.pictureBox7);
-            this.panel18.Controls.Add(this.btnReport2);
-            this.panel18.Controls.Add(this.label14);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel18.Location = new System.Drawing.Point(0, 0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(777, 46);
-            this.panel18.TabIndex = 83;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(68, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(318, 23);
-            this.label14.TabIndex = 75;
-            this.label14.Text = "Cliente con mayor y menor gasto";
-            // 
-            // panelReport
-            // 
-            this.panelReport.Location = new System.Drawing.Point(0, 0);
-            this.panelReport.Name = "panelReport";
-            this.panelReport.Size = new System.Drawing.Size(917, 168);
-            this.panelReport.TabIndex = 2;
-            this.panelReport.Visible = false;
-            // 
-            // btnReport7
-            // 
-            this.btnReport7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btnReport7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnReport7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnReport7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnReport7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReport7.Image = global::CineHoytsFront.Properties.Resources._7__Vistas;
-            this.btnReport7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport7.Location = new System.Drawing.Point(729, 0);
-            this.btnReport7.Name = "btnReport7";
-            this.btnReport7.Size = new System.Drawing.Size(46, 44);
-            this.btnReport7.TabIndex = 74;
-            this.btnReport7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReport7.UseVisualStyleBackColor = false;
-            this.btnReport7.Click += new System.EventHandler(this.btnReport7_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -236,76 +274,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 78;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(2, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 80;
-            this.pictureBox4.TabStop = false;
-            // 
-            // btnReport5
-            // 
-            this.btnReport5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btnReport5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnReport5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnReport5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnReport5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReport5.Image = global::CineHoytsFront.Properties.Resources._5___Espectadores_por_pelicula;
-            this.btnReport5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport5.Location = new System.Drawing.Point(729, 0);
-            this.btnReport5.Name = "btnReport5";
-            this.btnReport5.Size = new System.Drawing.Size(46, 45);
-            this.btnReport5.TabIndex = 74;
-            this.btnReport5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReport5.UseVisualStyleBackColor = false;
-            this.btnReport5.Click += new System.EventHandler(this.btnReport5_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(2, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 81;
-            this.pictureBox5.TabStop = false;
-            // 
-            // btnReport4
-            // 
-            this.btnReport4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.btnReport4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnReport4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnReport4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnReport4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnReport4.Image = global::CineHoytsFront.Properties.Resources._4__Tickets_emitidos;
-            this.btnReport4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport4.Location = new System.Drawing.Point(729, 0);
-            this.btnReport4.Name = "btnReport4";
-            this.btnReport4.Size = new System.Drawing.Size(46, 44);
-            this.btnReport4.TabIndex = 74;
-            this.btnReport4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReport4.UseVisualStyleBackColor = false;
-            this.btnReport4.Click += new System.EventHandler(this.btnReport4_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(2, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(37, 37);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 82;
-            this.pictureBox6.TabStop = false;
             // 
             // btnReport3
             // 
@@ -326,6 +294,19 @@
             this.btnReport3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnReport3.UseVisualStyleBackColor = false;
             this.btnReport3.Click += new System.EventHandler(this.btnReport3_Click);
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(139)))), ((int)(((byte)(162)))));
+            this.panel18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel18.Controls.Add(this.pictureBox7);
+            this.panel18.Controls.Add(this.btnReport2);
+            this.panel18.Controls.Add(this.label14);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(777, 46);
+            this.panel18.TabIndex = 83;
             // 
             // pictureBox7
             // 
@@ -357,6 +338,26 @@
             this.btnReport2.UseVisualStyleBackColor = false;
             this.btnReport2.Click += new System.EventHandler(this.btnReport2_Click);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(68, 11);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(318, 23);
+            this.label14.TabIndex = 75;
+            this.label14.Text = "Cliente con mayor y menor gasto";
+            // 
+            // panelReport
+            // 
+            this.panelReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelReport.Location = new System.Drawing.Point(0, 0);
+            this.panelReport.Name = "panelReport";
+            this.panelReport.Size = new System.Drawing.Size(917, 634);
+            this.panelReport.TabIndex = 2;
+            this.panelReport.Visible = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -385,18 +386,18 @@
             this.panel10.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

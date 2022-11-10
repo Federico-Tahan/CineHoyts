@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pnltop = new System.Windows.Forms.Panel();
+            this.btnMin = new System.Windows.Forms.PictureBox();
+            this.picCerrar = new System.Windows.Forms.PictureBox();
+            this.BtnMaxMin = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.picBoxMostrar = new System.Windows.Forms.PictureBox();
+            this.PicBoxOculto = new System.Windows.Forms.PictureBox();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbUsuario = new System.Windows.Forms.Label();
             this.txbContraseña = new System.Windows.Forms.TextBox();
             this.txbUsuario = new System.Windows.Forms.TextBox();
-            this.picBoxMostrar = new System.Windows.Forms.PictureBox();
-            this.PicBoxOculto = new System.Windows.Forms.PictureBox();
-            this.btnLogIn = new System.Windows.Forms.Button();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.btnMin = new System.Windows.Forms.PictureBox();
-            this.picCerrar = new System.Windows.Forms.PictureBox();
-            this.BtnMaxMin = new System.Windows.Forms.PictureBox();
             this.pnltop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnMaxMin)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxOculto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnMaxMin)).BeginInit();
             this.SuspendLayout();
             // 
             // pnltop
@@ -64,6 +64,43 @@
             this.pnltop.Size = new System.Drawing.Size(521, 30);
             this.pnltop.TabIndex = 1;
             this.pnltop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnltop_MouseDown_1);
+            // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
+            this.btnMin.Location = new System.Drawing.Point(411, 2);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(24, 26);
+            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMin.TabIndex = 5;
+            this.btnMin.TabStop = false;
+            // 
+            // picCerrar
+            // 
+            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
+            this.picCerrar.Location = new System.Drawing.Point(493, 2);
+            this.picCerrar.Name = "picCerrar";
+            this.picCerrar.Size = new System.Drawing.Size(25, 26);
+            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCerrar.TabIndex = 3;
+            this.picCerrar.TabStop = false;
+            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
+            // 
+            // BtnMaxMin
+            // 
+            this.BtnMaxMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnMaxMin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnMaxMin.Image = ((System.Drawing.Image)(resources.GetObject("BtnMaxMin.Image")));
+            this.BtnMaxMin.Location = new System.Drawing.Point(452, 2);
+            this.BtnMaxMin.Name = "BtnMaxMin";
+            this.BtnMaxMin.Size = new System.Drawing.Size(23, 26);
+            this.BtnMaxMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnMaxMin.TabIndex = 4;
+            this.BtnMaxMin.TabStop = false;
             // 
             // panel2
             // 
@@ -82,45 +119,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(521, 363);
             this.panel2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(246, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 23);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Contraseña";
-            // 
-            // lbUsuario
-            // 
-            this.lbUsuario.AutoSize = true;
-            this.lbUsuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbUsuario.Location = new System.Drawing.Point(246, 118);
-            this.lbUsuario.Name = "lbUsuario";
-            this.lbUsuario.Size = new System.Drawing.Size(78, 23);
-            this.lbUsuario.TabIndex = 62;
-            this.lbUsuario.Text = "Usuario";
-            // 
-            // txbContraseña
-            // 
-            this.txbContraseña.BackColor = System.Drawing.SystemColors.Info;
-            this.txbContraseña.Location = new System.Drawing.Point(250, 210);
-            this.txbContraseña.Name = "txbContraseña";
-            this.txbContraseña.Size = new System.Drawing.Size(195, 20);
-            this.txbContraseña.TabIndex = 61;
-            this.txbContraseña.UseSystemPasswordChar = true;
-            // 
-            // txbUsuario
-            // 
-            this.txbUsuario.BackColor = System.Drawing.SystemColors.Info;
-            this.txbUsuario.Location = new System.Drawing.Point(250, 144);
-            this.txbUsuario.Name = "txbUsuario";
-            this.txbUsuario.Size = new System.Drawing.Size(195, 20);
-            this.txbUsuario.TabIndex = 60;
             // 
             // picBoxMostrar
             // 
@@ -166,6 +164,45 @@
             this.btnLogIn.UseVisualStyleBackColor = false;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click_1);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(246, 184);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 23);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Contraseña";
+            // 
+            // lbUsuario
+            // 
+            this.lbUsuario.AutoSize = true;
+            this.lbUsuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbUsuario.Location = new System.Drawing.Point(246, 118);
+            this.lbUsuario.Name = "lbUsuario";
+            this.lbUsuario.Size = new System.Drawing.Size(78, 23);
+            this.lbUsuario.TabIndex = 62;
+            this.lbUsuario.Text = "Usuario";
+            // 
+            // txbContraseña
+            // 
+            this.txbContraseña.BackColor = System.Drawing.SystemColors.Info;
+            this.txbContraseña.Location = new System.Drawing.Point(250, 210);
+            this.txbContraseña.Name = "txbContraseña";
+            this.txbContraseña.Size = new System.Drawing.Size(195, 20);
+            this.txbContraseña.TabIndex = 61;
+            this.txbContraseña.UseSystemPasswordChar = true;
+            // 
+            // txbUsuario
+            // 
+            this.txbUsuario.BackColor = System.Drawing.SystemColors.Info;
+            this.txbUsuario.Location = new System.Drawing.Point(250, 144);
+            this.txbUsuario.Name = "txbUsuario";
+            this.txbUsuario.Size = new System.Drawing.Size(195, 20);
+            this.txbUsuario.TabIndex = 60;
+            // 
             // picLogo
             // 
             this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
@@ -176,43 +213,6 @@
             this.picLogo.TabIndex = 59;
             this.picLogo.TabStop = false;
             this.picLogo.Click += new System.EventHandler(this.picLogo_Click);
-            // 
-            // btnMin
-            // 
-            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMin.Image = ((System.Drawing.Image)(resources.GetObject("btnMin.Image")));
-            this.btnMin.Location = new System.Drawing.Point(411, 2);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(24, 26);
-            this.btnMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMin.TabIndex = 5;
-            this.btnMin.TabStop = false;
-            // 
-            // picCerrar
-            // 
-            this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
-            this.picCerrar.Location = new System.Drawing.Point(493, 2);
-            this.picCerrar.Name = "picCerrar";
-            this.picCerrar.Size = new System.Drawing.Size(25, 26);
-            this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCerrar.TabIndex = 3;
-            this.picCerrar.TabStop = false;
-            this.picCerrar.Click += new System.EventHandler(this.picCerrar_Click);
-            // 
-            // BtnMaxMin
-            // 
-            this.BtnMaxMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMaxMin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnMaxMin.Image = ((System.Drawing.Image)(resources.GetObject("BtnMaxMin.Image")));
-            this.BtnMaxMin.Location = new System.Drawing.Point(452, 2);
-            this.BtnMaxMin.Name = "BtnMaxMin";
-            this.BtnMaxMin.Size = new System.Drawing.Size(23, 26);
-            this.BtnMaxMin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.BtnMaxMin.TabIndex = 4;
-            this.BtnMaxMin.TabStop = false;
             // 
             // Login
             // 
@@ -227,14 +227,14 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.pnltop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnMaxMin)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxMostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxOculto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BtnMaxMin)).EndInit();
             this.ResumeLayout(false);
 
         }

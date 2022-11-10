@@ -109,9 +109,11 @@ namespace Cine_Hoyts.Formularios
                         oTask.Start();
                         await oTask;
                         loading.Close();
+                        await obtenerCine().Ejecutar();
                         obtenerCine().Show();
                         txbContraseña.Clear();
                         txbUsuario.Clear();
+
                     }
                     else
                     {

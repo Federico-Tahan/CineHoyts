@@ -226,47 +226,55 @@ namespace CineHoytsFront.Formularios
 
         private async void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (validar())
+            try
             {
-                Funcion f = new Funcion();
-                AbstraerFuncion(f);
-                if (await buscar(funSelected.id_funcion))
+                if (validar())
                 {
-                    f.id_funcion = funSelected.id_funcion;
-                    if (await UpdateFun(f))
+                    Funcion f = new Funcion();
+                    AbstraerFuncion(f);
+                    if (await buscar(funSelected.id_funcion))
                     {
-                        MessageBox.Show("Modificacion de funcion realizada con Exito");
-                        pnlCrud.Visible = false;
-                        habilitar_todo_btn(true);
-                        btnMod.Enabled = false;
-                        BtnGuardar.Enabled = false;
-                        btnBorrar.Enabled = false;
-                        Limpiar();
-                        await CargarComboAsyncFuncion();
-                        Cargar_DGV();
-                    }
-                }
-                else
-                {
-                    if (await AltaFun(f))
-                    {
-                        MessageBox.Show("Alta de funcion realizada con Exito");
-                        pnlCrud.Visible = false;
-                        habilitar_todo_btn(true);
-                        btnMod.Enabled = false;
-                        BtnGuardar.Enabled = false;
-                        btnBorrar.Enabled = false;
-                        Limpiar();
-                        await CargarComboAsyncFuncion();
-                        Cargar_DGV();
+                        f.id_funcion = funSelected.id_funcion;
+                        if (await UpdateFun(f))
+                        {
+                            MessageBox.Show("Modificacion de funcion realizada con Exito");
+                            pnlCrud.Visible = false;
+                            habilitar_todo_btn(true);
+                            btnMod.Enabled = false;
+                            BtnGuardar.Enabled = false;
+                            btnBorrar.Enabled = false;
+                            Limpiar();
+                            await CargarComboAsyncFuncion();
+                            Cargar_DGV();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Alta de funcion no se pudo realizar");
+                        if (await AltaFun(f))
+                        {
+                            MessageBox.Show("Alta de funcion realizada con Exito");
+                            pnlCrud.Visible = false;
+                            habilitar_todo_btn(true);
+                            btnMod.Enabled = false;
+                            BtnGuardar.Enabled = false;
+                            btnBorrar.Enabled = false;
+                            Limpiar();
+                            await CargarComboAsyncFuncion();
+                            Cargar_DGV();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Alta de funcion no se pudo realizar");
 
+                        }
                     }
                 }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Intentelo de nuevo más tarde");
+            }
+           
 
 
         }
